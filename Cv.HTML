@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enregistrer son CV</title>
+    <link rel="stylesheet" href="css/opportunity.css">
+</head>
+
+<body>
+    <header>
+    <div id="header1">
+        <div id="logo">
+            <img src="image/opportunity.png">
+        </div>
+        <div id="slogan">
+            <h1>Opportunity Career</h1>
+            <p>La recherche du travail est un travail à plein temps</p>
+        </div>
+    </div>
+    <div id="navbar">
+        <a href="index.html">Accueil</a>
+        <a href="APPEL.HTML">Poster une appel d'offre</a>
+        <a href="service.html">Rechercher un metier</a>
+        <a href="postulez.html">Postuler pour un emploi</a>
+        <a href="Cv.HTML">Enregistrer son CV</a>
+        <a href="Aide.html">Aide</a>
+    </div>
+    </header>
+    <section>
+        <h1 class="h1">CURRICULUM VITAE</h1>
+        <form method="post" action="php/cv.php">
+            <section id="form">
+                <section class="section">
+                    <fieldset><label>INFORMATIONS PERSONNELLES</label>
+                        <ol>
+                            <li>
+                                <div>
+                                    <p><label for="nom">Nom Complet:</label></p>
+                                    <p><input type="text" size="50" placeholder="Entrer votre nom" id="nom" name="nom" class="champ">
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p><label for="tel">Numero de Telephone</label></p>
+                                    <p><input type="tel" size="50" placeholder="+237 6xx xx xx xx" id="tel" name="tel"class="champ">
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p><label for="email">Email :</label></p>
+                                    <p><input type="email" size="50" placeholder="@gmail.com" name="email" id="email"
+                                            required class="champ"></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p><label for="nationality">Nationalite :</label></p>
+                                    <p><input type="text" size="50" id="nationality" name="nationality" class="champ"></p>
+                                </div>
+                            </li>
+                        </ol>
+                    </fieldset>
+                    <fieldset><label>PROFFESSION/METIER</label>
+                        <ol>
+                            <li>
+                                <div>
+                                    <p><label for="prof">Proffession</label></p>
+                                    <p><input id="prof" type="text" size="50" name="prof"
+                                            placeholder="Que faite vous dans la vie"class="champ"></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p><label for="competences">Ajouter vos competences</label></p>
+                                    <input id="competences" type="text" size="40" name="competences"
+                                        placeholder="competences" class="champ">
+                                    <button class="button" type="button">Ajouter</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <label for="">Ajouter vos experiences professionnelles</p>
+                                        <input id="annee" type="text" height="2rem" name="experiences" size="20"
+                                            placeholder="Annee">
+                                        <input id="experience" type="text" height="2rem" size="20" name="experience"
+                                            placeholder="Experience">
+                                        <button class="button" type="button">Ajouter</button>
+                                </div>
+                            </li>
+                        </ol>
+                    </fieldset>
+                </section>
+                <section class="section">
+                    <fieldset><label>STATUS ACADEMIQUE</label>
+                        <ol>
+                            <li>
+                                <div>
+                                    <p><label>Langue</label></p>
+                                    <p><input type="radio" name="lan" id="ang"><label for="ang">ANGLAIS</label></p>
+                                    <p><input type="radio" name="lan" id="fran"><label for="fran">FRANCAIS</label></p>
+                                    <p><input type="radio" name="lan" id="chi"><label for="chi">Chinois</label></p>
+                                    <!--javascript-->
+                                    <p><input type="radio" name="lan" id="autre"><label for="autre">AUTRES</label></p>
+                                    <!--javascript-->
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p><label >Diplome</label></p>
+                                    <p><input name="dip" id="auc" type="checkbox"><label for="auc">AUCUN</label></p>
+                                    <p><input name="dip" id="cep" type="checkbox"><label for="cep">CEP</label></p>
+                                    <p><input name="dip" id="bepc" type="checkbox"><label for="bepc">BEPC</label></p>
+                                    <p><input name="dip" id="pro" type="checkbox"><label for="pro">PROBATOIRE</label></p>
+                                    <p><input name="dip" id="bac" type="checkbox"><label for="bac">BACC</label></p>
+                                    <p><input name="dip" id="bts" type="checkbox"><label for="bts">BTS</label></p>
+                                    <p><input name="dip" id="lic" type="checkbox"><label for="lic">LICENCE</label></p>
+                                    <p><input name="dip" id="mas" type="checkbox"><label for="mas">MASTER</label></p>
+                                    <p><input name="dip" id="doc" type="checkbox"><label for="doc">DOCTORAT</label></p>
+                                    <p><input name="dip" id="aut" type="checkbox"><label for="aut">AUTRES</label></p>
+                                </div>
+                            </li>
+                            <li><label for="insert">Importer votre CV</label>
+                                <div id="insert">
+                                    <p><input type="file" name="insert" placeholder="ajouter un fichier"></p>
+                                </div>
+                            </li>
+                        </ol>
+                    </fieldset>
+                </section>
+            </section>
+            <div class="start">
+                <input type="submit" value="send" class="button">
+                <button class="button" type="reset">Reset</button>
+            </div>
+        </form>
+    </section>
+    <footer>
+        <div id="socialmedia">
+            <img src="fontawesome/svgs/brands/facebook.svg">
+            <img src="fontawesome/svgs/brands/twitter-square.svg">
+        </div>
+        <div id="logo">
+            <img src="image/opportunity.png" alt="oppportunity">
+        </div>
+    </footer>
+    <script src="js/opportunity.js"></script>
+</body>
+
+</html>
